@@ -1,56 +1,78 @@
-@charset "UTF-8";
-.loader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 10;
-    background-color: #fff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    animation: fadeOut .7s 1s forwards;
-  }
-  .loader img{
-    width: 100%;
-  }
-  
-  @keyframes fadeOut {
-    0% {
-      opacity: 1;
-    }
-  
-    100% {
-      opacity: 0;
-      visibility: hidden;
-    }
-  }
-  
-  .loading__logo {
-    opacity: 0;
-    animation: logo_fade 2s 0.5s forwards;
-    width: 175px;
-  }
-  
-  @keyframes logo_fade {
-    0% {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-  
-    60% {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  
-    100% {
-      opacity: 0;
-    }
-  }
-   h1{
-    font-size: 70px;
+* {
+    /* cursor: none */
+}
+
+body {
+    overflow: hidden
+}
+h1{
     text-align: center;
-    height: 100vh;
-    line-height: 100vh;
-   }
+}
+button{
+
+}
+a:hover{
+    position: relative;
+    top: 5px;
+    left: 5px;
+    box-shadow: none;
+}
+a{
+    text-align: center;
+    line-height: 60px;
+    width: 150px;
+    height: 60px;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+    display: block;
+    margin: 0 auto;
+    background-color: yellow;
+    width: 150px;
+    height: 60px;
+    border-radius: 5px;
+    border: #fff782 2px double;
+    box-shadow: #000 5px 5px;
+    font-family:'Courier New', Courier, monospace
+}
+    
+.loading {
+    background-color: #FFF;
+    width: 100%;
+    display: fixed
+}
+
+.loading img {
+    display: block;
+    min-height: 209px;
+    min-width: 200px;
+}
+
+.mouse {
+    width: 25px;
+    height: 25px;
+    border-radius: 100%;
+    background-color: #fff782;
+    position: absolute;
+    animation: mouseAnimation .5s infinite ease-in-out alternate;
+    /* left: 0; */
+    /* top: 0 */
+}
+
+@keyframes mouseAnimation {
+    
+    from {
+        width: 25px;
+        height: 25px
+    }
+    
+    to {
+        width: 15px;
+        height: 15px
+    }
+    
+}
+h1{
+    z-index: 100000;
+}
